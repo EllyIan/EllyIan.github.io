@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GastroPlan - Personalized Meal Planning Made Simple</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .navbar {
+            margin-bottom: 30px;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .section-title {
+            margin-bottom: 40px;
+        }
+        .feature-item {
+            margin-bottom: 20px;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">GastroPlan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tech">Technology</a></li>
+                <li class="nav-item"><a class="nav-link" href="#code">Code</a></li>
+                <li class="nav-item"><a class="nav-link" href="#demo">Live Demo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">About GastroPlan</h2>
+            <p>GastroPlan is a web application designed to simplify meal planning for busy individuals by offering personalized meal plans, ingredient substitutions, and smart shopping list generation. It features a user-friendly drag-and-drop meal planner,Personalized Recipe creation, customizable recipe suggestions based on dietary preferences, and allergen alerts. GastroPlan aims to reduce the stress of meal preparation by providing efficient and flexible solutions tailored to each user's needs.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Features</h2>
+            <div class="row">
+                <div class="col-md-6 feature-item">
+                    <h4>Drag-and-Drop Meal Planner</h4>
+                    <p>*work in progress*<br>Organize meals in a calendar-based planner, making it easy to plan the week or month. The drag-and-drop functionality ensures a flexible and user-friendly experience.</p>
+                </div>
+                <div class="col-md-6 feature-item">
+                    <h4>Meal Plan Templates</h4>
+                    <p>Pre-made templates for specific diets (e.g., low-carb, high-protein) or weekly themes (e.g., Meatless Mondays) offer a quick start for users.</p>
+                </div>
+                <div class="col-md-6 feature-item">
+                    <h4>Substitution Suggestions</h4>
+                    <p>Receive suggestions for alternative ingredients when creating shopping lists, helpful when certain items are out of stock or unavailable locally.</p>
+                </div>
+                <div class="col-md-6 feature-item">
+                    <h4>Grouped Shopping Lists</h4>
+                    <p>*work in progress*<br>Shopping lists are organized by categories like produce, dairy, and meat, helping users shop efficiently and avoid missing items.</p>
+                </div>
+                <div class="col-md-6 feature-item">
+                    <h4>Allergen Alerts</h4>
+                    <p>If a recipe contains an ingredient the user is allergic to, the platform will display a warning.</p>
+                </div>
+                <div class="col-md-6 feature-item">
+                    <h4>Preparation Time Filter</h4>
+                    <p>Filter recipes based on the time available. Categories like "Under 30 minutes," "30-60 minutes," and "Over 1 hour" make it easy to find suitable recipes.</p>
+                </div>
+            </div>
+            <div class="col-md-6 feature-item">
+                <h4>Personal Recipe Creation</h4>
+                <p>GastroPlan empowers users to create their own recipes with ease and flexibility. Users can input ingredients, instructions, and cooking times, ensuring each recipe is tailored to their preferences.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Team</h2>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4>Ian Mongi</h4>
+                    <p>Responsible for backend development, frontend design, and data engineering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="tech" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Technology & Architecture</h2>
+            <p><strong>Tech Stack:</strong></p>
+            <ul>
+                <li>Backend: Python, Flask, SQLAlchemy</li>
+                <li>Frontend: HTML, CSS, Bootstrap</li>
+                <li>Database: SQLite</li>
+                <li>Infrastructure: Custom server</li>
+            </ul>
+            <p><strong>Architecture:</strong> GastroPlan follows a client-server model. The client is a web browser, and the server is a Flask application. Data flows from the client to the server when creating or updating recipes and meal plans, and from the server to the client when retrieving recipes, meal plans, and other related data. The server handles business logic, data processing, and user authentication, while the client focuses on presenting the data and handling user interactions.</p>
+        </div>
+    </section>
+
+    <!-- Code Section -->
+    <section id="code" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Core Algorithms and Code Snippets</h2>
+            <pre><code class="language-python">
+# Function to fetch recipe details from Spoonacular API
+def fetch_recipe_details(recipe_id):
+    api_key = "c277860541eb44869955ba0958d29f4f"
+    url = f"https://api.spoonacular.com/recipes/{recipe_id}/information?apiKey={api_key}"
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching recipe details: {e}")
+        return None
+
+# Route for user login
+@auth.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.username.data).first()  # Assuming username is the email
+        if user and check_password_hash(user.password_hash, form.password.data):
+            flash(f'Login successful! Welcome back, {user.username}', 'success')
+            return redirect(url_for('auth.dashboard'))  # Redirect to the dashboard or home page after login
+        else:
+            flash('Invalid username or password.', 'error')
+    return render_template('login.html', form=form)
+
+# Route for home page
+@auth.route('/index')
+def home():
+    return render_template('index.html')
+
+# Route for listing recipes
+@auth.route('/recipe', methods=['GET', 'POST'])
+def recipe_list():
+    recipes = Recipe.query.all()
+    return render_template('recipe.html', recipes=recipes)
+
+# Route for displaying recipe details
+@auth.route('/recipe/details/<int:recipe_id>', methods=['GET'])
+def recipe_details(recipe_id):
+    api_recipe = fetch_recipe_details(recipe_id)
+    db_recipe = Recipe.query.get(recipe_id)
+    
+    if api_recipe is None and db_recipe is None:
+        return "Recipe not found", 404
+    
+    return render_template('recipe_details.html', api_recipe=api_recipe, db_recipe=db_recipe)
+            </code></pre>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Live Demo</h2>
+            <p>*work in progress*<br>To see GastroPlan in action, please click the link below to access our live demo.</p>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">View Live Demo</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+     <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Contact</h2>
+            <p class="text-center">For any inquiries or further information, please contact Ian Mongi at ianmongi45@gmail.com.</p>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+ </body>
+ </html>
